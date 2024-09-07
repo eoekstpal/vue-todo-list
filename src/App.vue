@@ -3,7 +3,7 @@
 import { ref } from 'vue';
 
 const inputValue = ref('');
-const todoList = ref([{ text: 'vue', done:false}]);
+const todoList = ref([{ text: 'vue', done: false }]);
 
 console.log(inputValue.value);
 
@@ -11,7 +11,7 @@ const handleClickButton = () => {
   const text = inputValue.value;
   todoList.value.push({
     text: text, 
-    done:false
+    done: false
   });
   console.log(todoList);
 };
