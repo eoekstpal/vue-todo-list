@@ -8,7 +8,11 @@ const todoList = ref([{ text: 'vue', done:false}]);
 console.log(inputValue.value);
 
 const handleClickButton = () => {
-  todoList.value.push(inputValue.value);
+  const text = inputValue.value;
+  todoList.value.push({
+    text: text, 
+    done:false
+  });
   console.log(todoList);
 };
 
@@ -49,7 +53,7 @@ todoList.value.splice(index, 1);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-text: center;
+  align-items: center;
   border: 1px solid yellow;
 }
 .done-item {
